@@ -1,1 +1,173 @@
 # Bhadra-gir-farm-product
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhadra Ghee - Pure and Authentic</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(14, 12, 12);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #200e0e;
+        }
+        header {
+            background-color: rgba(226, 115, 11, 0.8); /* Semi-transparent to show background */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: rgba(248, 248, 248, 0.8);
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: rgb(14, 12, 12);
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white for readability */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #8B4513;
+        }
+        .shop-button {
+            background-color: #8B4513;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+           
+        
+        #order-form {
+            display: none; /* Hidden by default */
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+        }
+        input[type="text"], input[type="tel"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        footer {
+            background-color: rgba(139, 69, 19, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        function toggleForm() {
+            var form = document.getElementById('order-form');
+            if (form.style.display === 'none' || form.style.display === '') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Bhadra gir farm product</h1>
+        <p>Pure, Traditional, and Handcrafted Ghee from Our Own Farmhouse</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#products">Shop Now</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <h2>Home</h2>
+        <p>Discover the rich, authentic taste of Bhadra Ghee, made with love and tradition. Our ghee is sourced from our own farmhouse, ensuring the highest quality and purity. Perfect for cooking, health, and wellness.</p>
+        <a href="#products" class="shop-button">Shop Now</a>
+        <img src="https://via.placeholder.com/400x200?text=Bhadra+Ghee" alt="Bhadra Ghee" style="width:100%; max-width:400px;">
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Bhadra Ghee, we are passionate about bringing you the finest ghee, crafted with care and tradition. Our journey began on our very own farmhouse, where we raise our cows in a natural, stress-free environment. This allows us to produce ghee that is not only delicious but also rich in nutrients, free from any artificial additives or preservatives.</p>
+        <p>Our farmhouse is a family-owned haven, spanning acres of lush green fields where our cattle graze on organic grass and are fed a balanced diet. We believe in sustainable farming practices that respect the land and the animals. Every batch of Bhadra Ghee is made using age-old methods, simmering the butter slowly to extract the pure essence, resulting in a product that melts in your mouth and enhances the flavor of your dishes.</p>
+        <p>What sets us apart is our commitment to quality and authenticity. We oversee every step of the process, from milking to packaging, ensuring that only the best reaches your kitchen. Our ghee is ideal for traditional Indian cooking, baking, or even as a healthy spread. Join us in celebrating the goodness of nature with Bhadra Ghee – pure, wholesome, and straight from our farmhouse to your home.</p>
+        <p>Visit our farmhouse to see the process firsthand and experience the warmth of our family tradition. We are proud to share our story and invite you to be a part of it.</p>
+    </section>
+
+    <section id="products">
+        <h2>Products</h2>
+        <p><strong>Bhadra Ghee (500g Jar)</strong>: Our flagship product, made from fresh cow's milk. Price: ₹900. Rich in vitamins A, D, E, and K, perfect for daily use.</p>
+        <p><strong>Bhadra Ghee (1kg Jar)</strong>: For larger households. Price:₹1800. Same quality, double the quantity.</p>
+        <p>All products are available for online ordering. Free delivery within the city!</p>
+        <button class="shop-button" onclick="toggleForm()">Order Now</button>
+        
+        <div id="order-form">
+            <h3>Order Form</h3>
+            <form action="https://formspree.io/f/xpznqkgb" method="POST"> <!-- Replace with your Formspree endpoint -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+                
+                <label>Select Quantity:</label><br>
+                <input type="radio" id="500g" name="quantity" value="500g" required>
+                <label for="500g">500g Jar (₹900)</label><br>
+                <input type="radio" id="1kg" name="quantity" value="1kg">
+                <label for="1kg">1kg Jar (₹1800)</label><br>
+                
+                <button type="submit" class="shop-button">Submit Order</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: Bhadragirfarm@gmail.com</p>
+        <p>Phone: +91 9904119336</p>
+        <p>Address: bhadra gir farm house,khamidana, keshod,gujarat, India</p>
+        <p>Follow us on social media for updates!
+           Bhadragirfarm__
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bhadra Ghee. All rights reserved.</p>
+    </footer>
+
+</body>
+</html
